@@ -56,7 +56,7 @@ export default function Hero() {
             <a href="https://github.com/Akshaypayya" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rounded-xl border border-white/5 bg-white/[0.03] p-3 transition duration-300 hover:border-white/20 hover:bg-white/10 hover:text-white">
               <Github size={20} />
             </a>
-            <a href="www.linkedin.com/in/akshay-chandranp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="rounded-xl border border-white/5 bg-white/[0.03] p-3 transition duration-300 hover:border-white/20 hover:bg-white/10 hover:text-white">
+            <a href="https://www.linkedin.com/in/akshay-chandranp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="rounded-xl border border-white/5 bg-white/[0.03] p-3 transition duration-300 hover:border-white/20 hover:bg-white/10 hover:text-white">
               <Linkedin size={20} />
             </a>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akshay.payya@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" className="rounded-xl border border-white/5 bg-white/[0.03] p-3 transition duration-300 hover:border-white/20 hover:bg-white/10 hover:text-white">

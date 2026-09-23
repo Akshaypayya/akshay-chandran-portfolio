@@ -142,7 +142,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="www.linkedin.com/in/akshay-chandranp"
+           href="https://www.linkedin.com/in/akshay-chandranp"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between rounded-xl border border-white/7 bg-white/[.02] p-4 text-zinc-300 transition duration-300 hover:border-white/15 hover:bg-white/[.05] hover:text-white"
