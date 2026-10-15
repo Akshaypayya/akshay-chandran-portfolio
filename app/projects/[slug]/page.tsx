@@ -38,7 +38,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               {project.category} · {project.type}
             </span>
             {project.badge && (
-              <span className="rounded-full border border-blue-400/30 bg-blue-500/20 px-3 py-0.5 font-mono text-xs font-semibold text-blue-200">
+              <span
+                className={`rounded-full border px-3 py-0.5 font-mono text-xs font-semibold ${
+                  project.isMaintenance
+                    ? "border-amber-400/30 bg-amber-500/20 text-amber-200"
+                    : "border-blue-400/30 bg-blue-500/20 text-blue-200"
+                }`}
+              >
                 {project.badge}
               </span>
             )}

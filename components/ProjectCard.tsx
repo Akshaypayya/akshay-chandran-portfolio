@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Reveal from "./Reveal";
-import { ArrowUpRight, Layers, Sparkles, Shield, Cpu, ExternalLink } from "lucide-react";
+import { ArrowUpRight, Layers, Sparkles, Shield, Cpu, ExternalLink, Wrench } from "lucide-react";
 import type { Project } from "../data/projects";
 
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -21,7 +21,14 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 </span>
                 <span className="font-mono text-xs uppercase tracking-wider text-zinc-400">{project.type}</span>
                 {project.badge && (
-                  <span className="rounded-full border border-blue-400/20 bg-blue-400/10 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-blue-300">
+                  <span
+                    className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold ${
+                      project.isMaintenance
+                        ? "border-amber-400/30 bg-amber-500/15 text-amber-300"
+                        : "border-blue-400/20 bg-blue-400/10 text-blue-300"
+                    }`}
+                  >
+                    {project.isMaintenance && <Wrench size={10} />}
                     {project.badge}
                   </span>
                 )}
@@ -66,7 +73,11 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                     <Layers size={14} className="text-blue-400" />
                     <span className="font-mono text-xs text-zinc-300 font-semibold">{project.name} Highlights</span>
                   </div>
-                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span
+                    className={`h-2 w-2 rounded-full ${
+                      project.isMaintenance ? "bg-amber-400 animate-pulse" : "bg-emerald-400 animate-pulse"
+                    }`}
+                  />
                 </div>
 
                 <div className="mt-4 grid gap-2.5">
@@ -80,7 +91,13 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                       {project.stats.slice(0, 2).map(st => (
                         <div key={st.label} className="rounded-xl border border-white/5 bg-white/[0.03] p-2.5">
                           <div className="font-mono text-[10px] text-zinc-500">{st.label}</div>
-                          <div className="mt-0.5 font-display text-xs font-bold text-blue-300">{st.value}</div>
+                          <div
+                            className={`mt-0.5 font-display text-xs font-bold ${
+                              st.value === "Under Maintenance" ? "text-amber-300" : "text-blue-300"
+                            }`}
+                          >
+                            {st.value}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -94,7 +111,9 @@ export default function ProjectCard({ project, index }: { project: Project; inde
               </div>
               <div className="mt-3 flex items-center justify-between px-1">
                 <span className="font-mono text-[10px] tracking-wider text-zinc-500 uppercase">{project.category}</span>
-                <span className="font-mono text-[10px] tracking-wide text-zinc-400">CASE STUDY PREVIEW</span>
+                <span className="font-mono text-[10px] tracking-wide text-zinc-400">
+                  {project.isMaintenance ? "MAINTENANCE PREVIEW" : "CASE STUDY PREVIEW"}
+                </span>
               </div>
             </div>
           </div>

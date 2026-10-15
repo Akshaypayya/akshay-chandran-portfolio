@@ -11,93 +11,93 @@ export type Project = {
   impact: string;
   stats?: { label: string; value: string }[];
   badge?: string;
+  isMaintenance?: boolean;
   architecture?: string;
 };
 
 export const projects: Project[] = [
+  // 1. protect_sdk_main -> Ironclad SDK
   {
     slug: "ironclad-sdk",
-    name: "Ironclad SDK & Dashboard",
-    type: "Modular RASP & Cybersecurity Ecosystem",
+    name: "Ironclad SDK",
+    type: "Modular Flutter/Dart Security SDK Ecosystem",
     category: "Security & Systems",
     badge: "Published on pub.dev",
-    summary: "Published pub.dev RASP security SDK with 38 modular companion packages covering zero-trust attestation, anti-tampering, cryptography, MPC, and an interactive diagnostics dashboard.",
-    description: "An enterprise-grade mobile security platform providing Runtime Application Self-Protection (RASP), Google Play Integrity & Apple App Attest enclave verification, anti-tampering (anti-Frida/hooking), RAM wiping, active cyber deception, envelope vault encryption, post-quantum cryptography (ML-KEM/ML-DSA), multi-party computation (Shamir SSS), and forensics helpers. Accompanied by an interactive Flutter dashboard to test security postures in real time.",
+    summary: "Published pub.dev enterprise RASP security SDK with 38 modular packages covering zero-trust attestation, anti-tampering, cryptography, MPC, and memory protection.",
+    description: "An enterprise-grade mobile security platform providing Runtime Application Self-Protection (RASP), Google Play Integrity and Apple App Attest enclave verification, anti-tampering (anti-Frida/hooking), RAM wiping, active cyber deception, envelope vault encryption, post-quantum cryptography (ML-KEM/ML-DSA), multi-party computation (Shamir SSS), and forensics helpers purpose-built for high-assurance FinTech, Banking, and Web3 applications.",
     gradient: "from-red-500/25 via-amber-500/10 to-transparent",
     stack: [
       "Dart",
       "Flutter",
       "pub.dev v0.0.3",
       "Platform Channels",
-      "RASP",
+      "RASP Engine",
       "Hardware Enclaves",
       "AES-GCM",
       "ChaCha20-Poly1305",
-      "Post-Quantum (ML-KEM)",
+      "Post-Quantum (ML-KEM/ML-DSA)",
       "MPC / Shamir SSS",
       "Play Integrity API",
-      "App Attest",
-      "Riverpod"
+      "App Attest"
     ],
     features: [
-      "Published core 'ironclad' package on pub.dev (v0.0.3) with 38 modular companion packages",
+      "Published core 'ironclad' package on pub.dev (v0.0.3) with 38 companion modular packages",
       "Runtime integrity checks: root, jailbreak, debugger, Frida, Xposed, Magisk, emulator & ADB detection",
       "Hardware enclave attestation validating Google Play Integrity & Apple App Attest tokens",
       "Envelope encryption vault with PBKDF2 key scheduling & HKDF derivation",
       "Post-Quantum Cryptography: NIST FIPS 203 ML-KEM and NIST FIPS 204 ML-DSA lattice encryption",
       "Multi-Party Computation & Shamir (k,n) threshold secret sharing via Galois Field arithmetic",
       "Anti-tapjacking touch filtering & OS-level FLAG_SECURE screen protection",
-      "Active cyber deception honeypots, canary tokens, and decompilation trip-wires",
-      "Companion Flutter live dashboard with trust score meters, threat logs, and real-time posture audits"
+      "Active cyber deception honeypots, canary tokens, and decompilation trip-wires"
     ],
-    impact: "Production-ready open-source security ecosystem engineered for high-assurance Fintech, Banking, and Web3 mobile applications.",
+    impact: "Production-ready open-source security ecosystem trusted for high-assurance Fintech, Banking, and Web3 mobile applications.",
     stats: [
       { label: "Packages", value: "38 Packages" },
       { label: "pub.dev Status", value: "Published v0.0.3" },
       { label: "Architecture", value: "Modular RASP" }
     ],
-    architecture: "Native OS Signals → Platform Channel → RASP Engine → Enclave Attestation → Policy Enforcement → Threat Redaction"
+    architecture: "Native OS Signals → Platform Channels → RASP Engine → Enclave Attestation → Policy Enforcement → Threat Redaction"
   },
+
+  // 2. ironclad_dashboard -> Ironclad Dashboard (Example Implementation)
   {
-    slug: "payzo-books",
-    name: "Payzo Books",
-    type: "Cloud Business Accounting & Financial SaaS",
-    category: "FinTech & Banking",
-    badge: "Enterprise SaaS",
-    summary: "Comprehensive business accounting and ERP platform handling invoicing, quotations, purchase orders, VAT/tax calculations, and automated recurring billing.",
-    description: "A production accounting and business management application built with Flutter, Riverpod, and REST/WebSocket APIs. Supports invoices, recurring billing, expense tracking, quotations, purchase orders, customer/vendor ledgers, multi-rate tax calculations, approval hierarchies, and dynamic financial analytics dashboards. Includes bidirectional Excel import/export and PDF generation with native Android MethodChannel file integration.",
-    gradient: "from-blue-600/25 via-indigo-500/10 to-transparent",
+    slug: "ironclad-dashboard",
+    name: "Ironclad Dashboard",
+    type: "Security Posture & Diagnostics Demo App",
+    category: "Security & Systems",
+    badge: "Interactive Demo",
+    summary: "Full Flutter example implementation and interactive diagnostics dashboard exercising Ironclad's 38 modular packages with real-time posture audits.",
+    description: "Built as the companion full Flutter example application with local path dependencies on Ironclad core and subpackages. Features an interactive dashboard with feature cards, action tiles, security-status/trust-score meters, live event triggers, and diagnostic dialogs to test security checks, storage, audit, networking, identity, and threat-monitoring modules across Android, iOS, and desktop.",
+    gradient: "from-amber-500/25 via-red-500/10 to-transparent",
     stack: [
       "Flutter",
+      "Dart",
       "Riverpod",
-      "REST APIs",
-      "Dio / HTTP",
-      "WebSockets",
-      "fl_chart",
-      "Excel Import/Export",
-      "PDF Generation",
-      "MethodChannel",
-      "Firebase FCM",
-      "Secure Storage"
+      "Ironclad Core",
+      "38 Modular Packages",
+      "Live Diagnostics",
+      "Trust Score Engine",
+      "Custom UI Cards",
+      "Platform Fallbacks"
     ],
     features: [
-      "Complete billing suite: Invoices, recurring invoices, credit notes, quotations, purchase orders, and expenses",
-      "Vendor & Customer directory with transaction history, payment due trackers, and ledger balances",
-      "ZATCA / VAT compliance calculation engine with multi-tier tax structures",
-      "Interactive financial dashboards with cash flow charts, revenue trends, and aging receivables",
-      "Excel data import/export engine for batch transaction processing",
-      "High-performance PDF invoice generation, printing, and file system sharing via native Android MethodChannel",
-      "Real-time approval workflow notifications powered by WebSockets and Firebase Cloud Messaging",
-      "Modular repository pattern with 95%+ core module test reliability and strict validation"
+      "Interactive companion dashboard exercising all 38 Ironclad security and cryptographic packages",
+      "Real-time security posture and Trust Score calculation visualization with reactive meters",
+      "Live simulation buttons for root/jailbreak checks, hook detection, and emulator flags",
+      "Interactive cryptographic test suite exercising envelope encryption, key vaulting, and RAM wipe",
+      "Audit log streaming interface visualizing tamper-evident event chains and timestamps",
+      "Platform-aware UI flows with graceful degradation where native capabilities differ"
     ],
-    impact: "Streamlines day-to-day accounting, tax compliance, and automated billing workflows for SMEs and enterprise businesses.",
+    impact: "Serves as the reference implementation and live testing harness for the entire Ironclad security ecosystem.",
     stats: [
-      { label: "Workflows", value: "15+ Modules" },
-      { label: "Reliability", value: "95%+ Coverage" },
-      { label: "Native Bridge", value: "MethodChannel" }
+      { label: "Coverage", value: "38 Modules" },
+      { label: "UI System", value: "Diagnostic Bento" },
+      { label: "State", value: "Riverpod" }
     ],
-    architecture: "Presentation (Riverpod) → Domain Entities → Repository Layer → BaseApiService (HTTP/Dio) → Backend Service"
+    architecture: "Dashboard UI → Riverpod Diagnostics Provider → Ironclad Core & Subpackages → Threat Evaluator → Trust Score Meter"
   },
+
+  // 3. growk -> GrowK
   {
     slug: "growk",
     name: "GrowK",
@@ -139,87 +139,50 @@ export const projects: Project[] = [
     ],
     architecture: "Client (Flutter/Riverpod) → Keycloak OAuth2 → Nafath Identity Gateway → Banking Core → Digital Ledger"
   },
+
+  // 4. payzo_books -> Payzo Books
   {
-    slug: "ez-bank",
-    name: "EZ Bank",
-    type: "Digital Banking & Wealth Management Platform",
+    slug: "payzo-books",
+    name: "Payzo Books",
+    type: "Cloud Business Accounting & Financial SaaS",
     category: "FinTech & Banking",
-    badge: "Wealth Tech",
-    summary: "Feature-first mobile banking experience featuring a 6-theme customization engine, 3 dashboard layouts, gold trading, and a 5-step SIP wealth wizard.",
-    description: "A modern Flutter banking and wealth management application utilizing Domain-Driven Feature-First Architecture. Offers dynamic UI personalization with 6 bespoke color themes, 3 distinct dashboard layout paradigms, live precious metals trading, sub-wallet management, dealer quote negotiation with timers, and a comprehensive 5-step Systematic Investment Plan (SIP) wizard with timeline transaction visualization.",
-    gradient: "from-emerald-500/25 via-teal-500/10 to-transparent",
-    stack: [
-      "Flutter",
-      "Dart",
-      "Riverpod",
-      "GoRouter",
-      "Dio",
-      "flutter_secure_storage",
-      "Dynamic Theming",
-      "Micro-animations",
-      "TypeScript",
-      "React Native Comparative Base"
-    ],
-    features: [
-      "Dynamic UI personalization engine with 6 luxury color themes (Burgundy, Dark, Emerald, Luxury, Ocean, Purple)",
-      "3 distinct dashboard layout models (V1 Classic, V2 3D Gradient Organic, V3 Bento Grid Power-User)",
-      "Comprehensive Precious Metals module: live spot prices, instant buy/sell, and wallet transfers with OTP",
-      "Dealer quote negotiation system with live countdown acceptance timers",
-      "5-step Systematic Investment Plan (SIP) creation and management wizard",
-      "Interactive ROI and Fund Performance calculators with timeline execution status views",
-      "Internal/external bank transfers, beneficiary management, and digital bill payments",
-      "Secure token storage with biometric gatekeeping and offline preference persistence"
-    ],
-    impact: "Demonstrates advanced UI engineering, modular state architecture, and complex financial wealth modeling.",
-    stats: [
-      { label: "Themes", value: "6 Luxury Themes" },
-      { label: "Dashboards", value: "3 Dynamic Layouts" },
-      { label: "SIP Wizard", value: "5-Step Execution" }
-    ],
-    architecture: "Feature-First Core → ThemeController → Riverpod Notifiers → GoRouter Shell → Secure Storage Engine"
-  },
-  {
-    slug: "synctalk",
-    name: "SyncTalk",
-    type: "Full-Stack Real-Time Communication Platform",
-    category: "Real-Time & Mobile",
-    badge: "Sub-100ms Latency",
-    summary: "Real-time messaging and WebRTC video calling platform with horizontally scalable Socket.IO infrastructure, Redis pub/sub, and offline-first Hive caching.",
-    description: "A production-grade communication platform featuring a Flutter mobile client, Flutter Web admin portal, and a Node.js/TypeScript backend. Designed for low latency messaging under 100ms, peer-to-peer WebRTC video/voice calls, Redis pub/sub cluster message distribution, offline-first message caching with Hive, and containerized Docker deployment.",
-    gradient: "from-violet-500/30 via-blue-500/10 to-transparent",
+    badge: "Enterprise SaaS",
+    summary: "Comprehensive business accounting and ERP platform handling invoicing, quotations, purchase orders, VAT/tax calculations, and automated recurring billing.",
+    description: "A production accounting and business management application built with Flutter, Riverpod, and REST/WebSocket APIs. Supports invoices, recurring billing, expense tracking, quotations, purchase orders, customer/vendor ledgers, multi-rate tax calculations, approval hierarchies, and dynamic financial analytics dashboards. Includes bidirectional Excel import/export and PDF generation with native Android MethodChannel file integration.",
+    gradient: "from-blue-600/25 via-indigo-500/10 to-transparent",
     stack: [
       "Flutter",
       "Riverpod",
-      "WebRTC",
-      "Socket.IO",
-      "Node.js",
-      "TypeScript",
-      "Express",
-      "MongoDB",
-      "Redis Pub/Sub",
-      "Docker Compose",
-      "Nginx",
-      "Hive",
-      "GoRouter"
+      "REST APIs",
+      "Dio / HTTP",
+      "WebSockets",
+      "fl_chart",
+      "Excel Import/Export",
+      "PDF Generation",
+      "MethodChannel",
+      "Firebase FCM",
+      "Secure Storage"
     ],
     features: [
-      "Sub-100ms real-time messaging with delivery, read receipts, and typing indicators",
-      "WebRTC peer-to-peer audio and video calling with STUN/TURN ICE negotiation",
-      "Horizontal clustering with Socket.IO Redis Adapter for multi-instance message broadcasting",
-      "Offline-first architecture with local Hive database and automated background sync queue",
-      "Flutter Web administration dashboard for user moderation, chat metrics, and system telemetry",
-      "Rich media transmission (images, audio notes, video clips) via Cloudinary pipeline",
-      "Docker Compose orchestration with Nginx reverse proxy, SSL termination, and rate limiting",
-      "Automated CI/CD pipelines with GitHub Actions for linting and build validation"
+      "Complete billing suite: Invoices, recurring invoices, credit notes, quotations, purchase orders, and expenses",
+      "Vendor & Customer directory with transaction history, payment due trackers, and ledger balances",
+      "ZATCA / VAT compliance calculation engine with multi-tier tax structures",
+      "Interactive financial dashboards with cash flow charts, revenue trends, and aging receivables",
+      "Excel data import/export engine for batch transaction processing",
+      "High-performance PDF invoice generation, printing, and file system sharing via native Android MethodChannel",
+      "Real-time approval workflow notifications powered by WebSockets and Firebase Cloud Messaging",
+      "Modular repository pattern with 95%+ core module test reliability and strict validation"
     ],
-    impact: "Engineered sub-100ms message delivery latency and high-concurrency real-time WebSocket infrastructure.",
+    impact: "Streamlines day-to-day accounting, tax compliance, and automated billing workflows for SMEs and enterprise businesses.",
     stats: [
-      { label: "Delivery Latency", value: "<100ms" },
-      { label: "Calling", value: "WebRTC Audio/Video" },
-      { label: "Deployment", value: "Docker + Nginx" }
+      { label: "Workflows", value: "15+ Modules" },
+      { label: "Reliability", value: "95%+ Coverage" },
+      { label: "Native Bridge", value: "MethodChannel" }
     ],
-    architecture: "Flutter Mobile / Web → WebSocket / WebRTC → Nginx Load Balancer → Node.js Cluster → Redis Pub/Sub → MongoDB"
+    architecture: "Presentation (Riverpod) → Domain Entities → Repository Layer → BaseApiService (HTTP/Dio) → Backend Service"
   },
+
+  // 5. eccomerce_app -> Multi-Vendor E-Commerce
   {
     slug: "multi-vendor-ecommerce",
     name: "Multi-Vendor E-Commerce",
@@ -259,6 +222,8 @@ export const projects: Project[] = [
     ],
     architecture: "3 Clients (Buyer, Vendor, Admin) → Express REST API → MongoDB Cluster → Stripe / Cloudinary / AWS Services"
   },
+
+  // 6. ride_booking -> AutoRide
   {
     slug: "autoride",
     name: "AutoRide",
@@ -298,6 +263,87 @@ export const projects: Project[] = [
     ],
     architecture: "Passenger / Driver Apps → Geolocator GPS → Firebase Realtime DB → Express Payment Backend → Razorpay Gateway"
   },
+
+  // 7. sky_hopper -> SkyHopper
+  {
+    slug: "skyhopper",
+    name: "SkyHopper",
+    type: "2D Arcade Game",
+    category: "Real-Time & Mobile",
+    badge: "60 FPS Game Engine",
+    summary: "A 60 FPS Flutter/Flame arcade game with custom physics, sprite animations, collision detection, audio, and local high-score persistence.",
+    description: "A 2D arcade mobile game built with the Flame game engine, demonstrating custom game loop implementation, sprite animation rendering, rigid-body collision detection, layered parallax backgrounds, responsive touch/tilt controls, BGM/SFX audio management, and local high-score progression.",
+    gradient: "from-fuchsia-500/25 via-purple-500/10 to-transparent",
+    stack: [
+      "Flutter",
+      "Flame 2D Engine",
+      "Flame Audio",
+      "Riverpod",
+      "CustomPainter",
+      "Google Mobile Ads",
+      "SharedPreferences"
+    ],
+    features: [
+      "Fluid 60 FPS gameplay powered by the Flame game engine loop",
+      "Component lifecycle management with continuous delta-time physics updates",
+      "Precision bounding-box collision detection for obstacles and collectible coins/energy",
+      "Multi-layered parallax scrolling backgrounds with depth illusion",
+      "Dynamic audio management with background music (BGM) and spatial sound effects (SFX)",
+      "Comprehensive game state machine: start menu, active gameplay, pause, and game-over states",
+      "AdMob advertising framework integration for banners, interstitials, and rewarded video",
+      "Local high-score and progression persistence using SharedPreferences"
+    ],
+    impact: "Demonstrates deep mastery of Flutter's rendering pipeline, frame budgets, custom graphics, and game architecture.",
+    stats: [
+      { label: "Framerate", value: "60 FPS Target" },
+      { label: "Engine", value: "Flame 2D Engine" },
+      { label: "Monetization", value: "Google Mobile Ads" }
+    ],
+    architecture: "Flutter Canvas → Flame GameLoop → Sprite Component Tree → Collision Rects → Flame Audio → SharedPreferences"
+  },
+
+  // 8. ez-bank -> EZ Bank
+  {
+    slug: "ez-bank",
+    name: "EZ Bank",
+    type: "Digital Banking & Wealth Management Platform",
+    category: "FinTech & Banking",
+    badge: "Wealth Tech",
+    summary: "Feature-first mobile banking experience featuring a 6-theme customization engine, 3 dashboard layouts, gold trading, and a 5-step SIP wealth wizard.",
+    description: "A modern Flutter banking and wealth management application utilizing Domain-Driven Feature-First Architecture. Offers dynamic UI personalization with 6 bespoke color themes, 3 distinct dashboard layout paradigms, live precious metals trading, sub-wallet management, dealer quote negotiation with timers, and a comprehensive 5-step Systematic Investment Plan (SIP) wizard with timeline transaction visualization.",
+    gradient: "from-emerald-500/25 via-teal-500/10 to-transparent",
+    stack: [
+      "Flutter",
+      "Dart",
+      "Riverpod",
+      "GoRouter",
+      "Dio",
+      "flutter_secure_storage",
+      "Dynamic Theming",
+      "Micro-animations",
+      "TypeScript",
+      "React Native Comparative Base"
+    ],
+    features: [
+      "Dynamic UI personalization engine with 6 luxury color themes (Burgundy, Dark, Emerald, Luxury, Ocean, Purple)",
+      "3 distinct dashboard layout models (V1 Classic, V2 3D Gradient Organic, V3 Bento Grid Power-User)",
+      "Comprehensive Precious Metals module: live spot prices, instant buy/sell, and wallet transfers with OTP",
+      "Dealer quote negotiation system with live countdown acceptance timers",
+      "5-step Systematic Investment Plan (SIP) creation and management wizard",
+      "Interactive ROI and Fund Performance calculators with timeline execution status views",
+      "Internal/external bank transfers, beneficiary management, and digital bill payments",
+      "Secure token storage with biometric gatekeeping and offline preference persistence"
+    ],
+    impact: "Demonstrates advanced UI engineering, modular state architecture, and complex financial wealth modeling.",
+    stats: [
+      { label: "Themes", value: "6 Luxury Themes" },
+      { label: "Dashboards", value: "3 Dynamic Layouts" },
+      { label: "SIP Wizard", value: "5-Step Execution" }
+    ],
+    architecture: "Feature-First Core → ThemeController → Riverpod Notifiers → GoRouter Shell → Secure Storage Engine"
+  },
+
+  // 9. sudan-upi -> SIMT UPI
   {
     slug: "sudan-upi",
     name: "SIMT UPI",
@@ -339,40 +385,49 @@ export const projects: Project[] = [
     ],
     architecture: "Device SIM & Biometrics → Locale/Theme Controllers → Account Discovery → EBS Network Switch → QR/P2P Engine"
   },
+
+  // 10. sync talk -> SyncTalk (Under Maintenance, moved to last)
   {
-    slug: "skyhopper",
-    name: "SkyHopper",
-    type: "2D Arcade Game",
+    slug: "synctalk",
+    name: "SyncTalk",
+    type: "Full-Stack Real-Time Communication Platform (Under Maintenance)",
     category: "Real-Time & Mobile",
-    badge: "60 FPS Game Engine",
-    summary: "A 60 FPS Flutter/Flame arcade game with custom physics, sprite animations, collision detection, audio, and local high-score persistence.",
-    description: "A 2D arcade mobile game built with the Flame game engine, demonstrating custom game loop implementation, sprite animation rendering, rigid-body collision detection, layered parallax backgrounds, responsive touch/tilt controls, BGM/SFX audio management, and local high-score progression.",
-    gradient: "from-fuchsia-500/25 via-purple-500/10 to-transparent",
+    badge: "Under Maintenance",
+    isMaintenance: true,
+    summary: "Real-time messaging and WebRTC video calling platform with scalable Socket.IO, Redis pub/sub, and Hive offline caching (currently under active maintenance and architecture upgrade).",
+    description: "A real-time communication platform featuring a Flutter mobile client, Flutter Web admin portal, and a Node.js/TypeScript backend. Designed for low latency messaging under 100ms, peer-to-peer WebRTC video/voice calls, Redis pub/sub cluster message distribution, offline-first message caching with Hive, and containerized Docker deployment. Note: This project is currently undergoing maintenance and modernization.",
+    gradient: "from-violet-500/20 via-zinc-800/10 to-transparent",
     stack: [
       "Flutter",
-      "Flame 2D Engine",
-      "Flame Audio",
       "Riverpod",
-      "CustomPainter",
-      "Google Mobile Ads",
-      "SharedPreferences"
+      "WebRTC",
+      "Socket.IO",
+      "Node.js",
+      "TypeScript",
+      "Express",
+      "MongoDB",
+      "Redis Pub/Sub",
+      "Docker Compose",
+      "Nginx",
+      "Hive",
+      "GoRouter"
     ],
     features: [
-      "Fluid 60 FPS gameplay powered by the Flame game engine loop",
-      "Component lifecycle management with continuous delta-time physics updates",
-      "Precision bounding-box collision detection for obstacles and collectible coins/energy",
-      "Multi-layered parallax scrolling backgrounds with depth illusion",
-      "Dynamic audio management with background music (BGM) and spatial sound effects (SFX)",
-      "Comprehensive game state machine: start menu, active gameplay, pause, and game-over states",
-      "AdMob advertising framework integration for banners, interstitials, and rewarded video",
-      "Local high-score and progression persistence using SharedPreferences"
+      "Sub-100ms real-time messaging with delivery, read receipts, and typing indicators",
+      "WebRTC peer-to-peer audio and video calling with STUN/TURN ICE negotiation",
+      "Horizontal clustering with Socket.IO Redis Adapter for multi-instance message broadcasting",
+      "Offline-first architecture with local Hive database and automated background sync queue",
+      "Flutter Web administration dashboard for user moderation, chat metrics, and system telemetry",
+      "Rich media transmission (images, audio notes, video clips) via Cloudinary pipeline",
+      "Docker Compose orchestration with Nginx reverse proxy, SSL termination, and rate limiting",
+      "Project currently placed under scheduled maintenance and refactoring"
     ],
-    impact: "Demonstrates deep mastery of Flutter's rendering pipeline, frame budgets, custom graphics, and game architecture.",
+    impact: "Engineered sub-100ms message delivery latency and high-concurrency real-time WebSocket infrastructure.",
     stats: [
-      { label: "Framerate", value: "60 FPS Target" },
-      { label: "Engine", value: "Flame 2D Engine" },
-      { label: "Monetization", value: "Google Mobile Ads" }
+      { label: "Status", value: "Under Maintenance" },
+      { label: "Delivery Latency", value: "<100ms" },
+      { label: "Calling", value: "WebRTC Audio/Video" }
     ],
-    architecture: "Flutter Canvas → Flame GameLoop → Sprite Component Tree → Collision Rects → Flame Audio → SharedPreferences"
+    architecture: "Flutter Mobile / Web → WebSocket / WebRTC → Nginx Load Balancer → Node.js Cluster → Redis Pub/Sub → MongoDB"
   }
 ];
