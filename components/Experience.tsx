@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Briefcase, Calendar, MapPin, CheckCircle2 } from "lucide-react";
 
 export default function Experience() {
   return (
@@ -14,7 +14,7 @@ export default function Experience() {
               <Calendar size={12} /> APR 2023 — PRESENT
             </span>
             <span className="inline-flex items-center gap-1 font-mono text-xs text-zinc-400">
-              <MapPin size={12} /> Kochi, India
+              <MapPin size={12} /> Kochi, Kerala, India
             </span>
           </div>
 
@@ -25,18 +25,19 @@ export default function Experience() {
 
           <ul className="mt-6 grid gap-3 text-zinc-300 md:grid-cols-2">
             {[
-              "Architected and delivered 10+ cross-platform Flutter applications for iOS and Android.",
-              "Engineered GrowK, a digital 24K gold investment and savings app with Keycloak OAuth2 & Saudi Nafath KYC.",
-              "Developed crypto wallet and accounting platforms, including gamified crypto rewards & Payzo Books features.",
-              "Translated responsive Figma wireframes into production Flutter interfaces and reusable design system components.",
-              "Automated build and deployment pipelines with GitHub Actions, reducing release deployment cycle times by 40%.",
-              "Applied MVVM / Clean Architecture with Riverpod & Provider, with 95%+ test coverage across core modules."
+              "Develop and maintain 10+ cross-platform Flutter applications for Android, iOS, and Flutter Web using Dart.",
+              "Build responsive, reusable UI components using Riverpod & Provider modular patterns, including MVVM and Clean Architecture.",
+              "Translate Figma/product wireframes into maintainable interfaces, collaborating closely with design, backend, QA, and product teams.",
+              "Integrate REST APIs, Firebase services, OAuth2 authentication, notifications, payments (Stripe, Razorpay), and local storage across fintech, accounting, and commerce workflows.",
+              "Troubleshoot UI/API/device issues, optimize performance, and maintain unit, widget, and integration tests; achieved 95%+ core-module test coverage on a major application.",
+              "Contribute to backend/API integration using Node.js, Express.js, TypeScript, and MongoDB; participate in Git reviews and GitHub Actions CI/CD workflows."
             ].map((x, i) => (
               <li
                 key={i}
-                className="glass-card rounded-2xl p-4 text-sm leading-relaxed transition duration-300 hover:border-blue-500/30"
+                className="glass-card flex items-start gap-3 rounded-2xl p-4 text-sm leading-relaxed transition duration-300 hover:border-blue-500/30"
               >
-                {x}
+                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400 shrink-0" />
+                <span>{x}</span>
               </li>
             ))}
           </ul>
@@ -51,7 +52,7 @@ export default function Experience() {
               <Calendar size={12} /> JAN 2023 — MAR 2023
             </span>
             <span className="inline-flex items-center gap-1 font-mono text-xs text-zinc-400">
-              <MapPin size={12} /> Kochi, India
+              <MapPin size={12} /> Kochi, Kerala, India
             </span>
           </div>
 
@@ -62,15 +63,17 @@ export default function Experience() {
 
           <ul className="mt-6 grid gap-3 text-zinc-300 md:grid-cols-2">
             {[
-              "Built internal CRM mobile tools for sales workflows and client interaction tracking.",
-              "Developed 3+ cross-platform mobile apps using custom UI animations, CustomPainter and responsive screen adapters.",
-              "Participated in 20+ code reviews focused on code standards, memory leak prevention and performance optimization."
+              "Developed Flutter interfaces with responsive layouts, reusable widgets, REST API integration, and custom UI components.",
+              "Created CustomPainter-based interactive screens and dynamic animations for enhanced engagement.",
+              "Contributed to an internal CRM and 3+ cross-platform app projects; resolved device-specific layout, navigation, and integration issues.",
+              "Collaborated in active code reviews focusing on null safety, code maintainability, and Flutter best practices."
             ].map((x, i) => (
               <li
                 key={i}
-                className="glass-card rounded-2xl p-4 text-sm leading-relaxed transition duration-300 hover:border-white/20"
+                className="glass-card flex items-start gap-3 rounded-2xl p-4 text-sm leading-relaxed transition duration-300 hover:border-white/20"
               >
-                {x}
+                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-zinc-500 shrink-0" />
+                <span>{x}</span>
               </li>
             ))}
           </ul>
@@ -79,4 +82,3 @@ export default function Experience() {
     </Reveal>
   );
 }
-

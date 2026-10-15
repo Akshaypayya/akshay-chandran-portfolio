@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, Sparkles, Terminal, Code2 } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Github, Linkedin, Mail, Sparkles, Terminal, Shield, Zap } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -12,13 +12,17 @@ export default function Hero() {
 
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_.8fr]">
         <div>
-          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/25 bg-blue-500/10 px-4 py-2 font-mono text-xs font-semibold text-blue-300 backdrop-blur-md shadow-sm">
+          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className="flex flex-wrap items-center gap-2.5">
+            <span className="inline-flex items-center gap-2 rounded-full border border-blue-500/25 bg-blue-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-blue-300 backdrop-blur-md shadow-sm">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
               </span>
               AVAILABLE FOR REMOTE OPPORTUNITIES
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-emerald-300 backdrop-blur-md shadow-sm">
+              <Zap size={13} className="text-emerald-400" />
+              IMMEDIATE JOINER
             </span>
           </motion.div>
 
@@ -32,7 +36,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-7 max-w-2xl text-lg sm:text-xl leading-relaxed text-zinc-300">
-            Full-Stack & Mobile Engineer crafting high-performance <span className="font-semibold text-blue-400">Flutter applications</span> and scalable <span className="font-semibold text-indigo-300">Node.js backends</span>.
+            Full-Stack & Mobile Engineer with <span className="font-semibold text-white">3.5+ years of experience</span> crafting high-performance <span className="font-semibold text-blue-400">Flutter cross-platform apps</span>, resilient <span className="font-semibold text-indigo-300">Node.js / Express backends</span>, and modular <span className="font-semibold text-emerald-400">mobile security SDKs</span>.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-9 flex flex-wrap items-center gap-4">
@@ -52,7 +56,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }} className="mt-10 flex items-center gap-5 text-zinc-400">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }} className="mt-10 flex items-center gap-4 text-zinc-400">
             <a href="https://github.com/Akshaypayya" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rounded-xl border border-white/5 bg-white/[0.03] p-3 transition duration-300 hover:border-white/20 hover:bg-white/10 hover:text-white">
               <Github size={20} />
             </a>
@@ -62,6 +66,9 @@ export default function Hero() {
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akshay.payya@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" className="rounded-xl border border-white/5 bg-white/[0.03] p-3 transition duration-300 hover:border-white/20 hover:bg-white/10 hover:text-white">
               <Mail size={20} />
             </a>
+            <span className="font-mono text-xs text-zinc-500 pl-2 border-l border-white/10">
+              Kerala, India · +91-7736976618
+            </span>
           </motion.div>
         </div>
 
@@ -79,25 +86,28 @@ export default function Hero() {
                   <Terminal size={14} className="text-blue-400" /> developer.ts
                 </div>
               </div>
-              <div className="mt-6 font-mono text-sm leading-8">
+              <div className="mt-6 font-mono text-xs sm:text-sm leading-7 sm:leading-8">
                 <div><span className="text-purple-400 font-semibold">const</span> <span className="text-blue-300">developer</span> = {"{"}</div>
-                <div className="pl-6 text-zinc-400">name: <span className="text-emerald-300">"Akshay Chandran"</span>,</div>
-                <div className="pl-6 text-zinc-400">title: <span className="text-emerald-300">"Full-Stack & Mobile Engineer"</span>,</div>
-                <div className="pl-6 text-zinc-400">experience: <span className="text-amber-300">"3.5+ Years"</span>,</div>
-                <div className="pl-6 text-zinc-400">mobile: [<span className="text-sky-300">"Flutter"</span>, <span className="text-sky-300">"Riverpod"</span>],</div>
-                <div className="pl-6 text-zinc-400">backend: [<span className="text-emerald-300">"Node.js"</span>, <span className="text-purple-300">"Express"</span>],</div>
-                <div className="pl-6 text-zinc-400">database: [<span className="text-emerald-300">"MongoDB"</span>, <span className="text-rose-300">"Redis"</span>]</div>
+                <div className="pl-5 text-zinc-400">name: <span className="text-emerald-300">"Akshay Chandran P"</span>,</div>
+                <div className="pl-5 text-zinc-400">role: <span className="text-emerald-300">"Flutter & Full-Stack Developer"</span>,</div>
+                <div className="pl-5 text-zinc-400">experience: <span className="text-amber-300">"3.5+ Years"</span>,</div>
+                <div className="pl-5 text-zinc-400">notice: <span className="text-emerald-300 font-semibold">"Immediate Joiner"</span>,</div>
+                <div className="pl-5 text-zinc-400">mobile: [<span className="text-sky-300">"Flutter"</span>, <span className="text-sky-300">"Riverpod"</span>, <span className="text-sky-300">"Dart"</span>],</div>
+                <div className="pl-5 text-zinc-400">backend: [<span className="text-emerald-300">"Node.js"</span>, <span className="text-purple-300">"Express"</span>, <span className="text-blue-300">"TypeScript"</span>],</div>
+                <div className="pl-5 text-zinc-400">security: [<span className="text-rose-300">"Ironclad RASP"</span>, <span className="text-rose-300">"pub.dev v0.0.3"</span>],</div>
+                <div className="pl-5 text-zinc-400">database: [<span className="text-emerald-300">"MongoDB"</span>, <span className="text-rose-300">"Redis"</span>, <span className="text-amber-300">"Firebase"</span>]</div>
                 <div>{"}"};</div>
               </div>
             </div>
 
-            <div className="mt-4 grid grid-cols-3 gap-2.5">
+            <div className="mt-4 grid grid-cols-4 gap-2">
               {[
                 { name: "Flutter", color: "bg-sky-500/20 text-sky-300 border-sky-500/30" },
                 { name: "Node.js", color: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30" },
+                { name: "RASP SDK", color: "bg-rose-500/20 text-rose-300 border-rose-500/30" },
                 { name: "MongoDB", color: "bg-green-500/20 text-green-300 border-green-500/30" }
               ].map(tech => (
-                <div key={tech.name} className={`rounded-xl border px-3 py-2.5 text-center text-xs font-semibold backdrop-blur-md ${tech.color}`}>
+                <div key={tech.name} className={`rounded-xl border px-2 py-2 text-center font-mono text-[11px] font-semibold backdrop-blur-md ${tech.color}`}>
                   {tech.name}
                 </div>
               ))}
@@ -106,10 +116,9 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <a href="#about" className="absolute bottom-6 left-1/2 -translate-x-1/2 text-zinc-500 transition hover:text-white animate-bounce">
+      <a href="#about" className="absolute bottom-6 left-1/2 -translate-x-1/2 text-zinc-500 transition hover:text-white animate-bounce" aria-label="Scroll down">
         <ArrowDown size={20} />
       </a>
     </section>
   );
 }
-

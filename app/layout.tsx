@@ -9,12 +9,13 @@ const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-space" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Akshay Chandran — Full-Stack Developer",
-  description: "Portfolio of Akshay Chandran — Flutter, Node.js, MongoDB and modern full-stack development.",
-  metadataBase: new URL("https://akshaychandran.dev"),
+  title: "Akshay Chandran P — Flutter & Full-Stack Developer | Immediate Joiner",
+  description: "Portfolio of Akshay Chandran — Flutter Developer with 3.5+ years of experience building cross-platform mobile and web applications with Flutter/Dart, Node.js, Express, TypeScript, MongoDB, and modular architecture.",
+  metadataBase: new URL("https://akshay-chandran-portfolio.vercel.app"),
   openGraph: {
-    title: "Akshay Chandran — Full-Stack Developer",
-    description: "Flutter • Node.js • MongoDB • Redis • WebRTC",
+    title: "Akshay Chandran P — Flutter & Full-Stack Developer",
+    description: "Flutter • Dart • Riverpod • Node.js • Express • TypeScript • MongoDB • RASP Security • Immediate Joiner",
+    url: "https://akshay-chandran-portfolio.vercel.app",
     type: "website"
   }
 };
