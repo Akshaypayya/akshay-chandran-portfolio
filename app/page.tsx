@@ -19,7 +19,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-[1.25fr_.75fr]">
             <div className="glass rounded-3xl p-7 md:p-10">
               <p className="text-lg leading-8 text-zinc-300">
-                I’m a <span className="font-semibold text-white">Flutter Developer & Full-Stack Engineer</span> with <span className="font-semibold text-blue-400">3.5+ years of experience</span> building cross-platform mobile, web, and backend applications. I specialize in modular architecture, Riverpod/Provider state management, REST APIs, WebSockets, Firebase, and production-ready delivery.
+                I’m a <span className="font-semibold text-white">Flutter Developer & Full-Stack Engineer</span> with <span className="font-semibold text-blue-400">4 years of experience</span> building cross-platform mobile, web, and backend applications. I specialize in modular architecture, Riverpod/Provider state management, REST APIs, WebSockets, Firebase, and production-ready delivery.
               </p>
               <p className="mt-5 leading-7 text-zinc-400">
                 My work spans military-grade mobile security tooling (<span className="text-zinc-200">Ironclad RASP SDK published on pub.dev</span> with 38 modular packages), enterprise OTT & cloud video streaming (<span className="text-zinc-200">AetherStream</span> with AWS Media Services, ABR ladders & QoE analytics), FinTech & digital gold savings (Saudi Nafath KYC in GrowK), business ERP & accounting (Payzo Books), multi-vendor marketplaces, and real-time ride-booking with live GPS routing.
@@ -39,7 +39,7 @@ export default function Home() {
 
             <div className="grid grid-cols-2 gap-3">
               {[
-                ["3.5+", "Years experience"],
+                ["4", "Years experience"],
                 ["10+", "Production apps"],
                 ["38", "Security packages"],
                 ["0 Days", "Notice period (Immediate)"]

@@ -36,7 +36,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-7 max-w-2xl text-lg sm:text-xl leading-relaxed text-zinc-300">
-            Full-Stack & Mobile Engineer with <span className="font-semibold text-white">3.5+ years of experience</span> crafting high-performance <span className="font-semibold text-blue-400">Flutter cross-platform apps</span>, resilient <span className="font-semibold text-indigo-300">Node.js / Express backends</span>, and modular <span className="font-semibold text-emerald-400">mobile security SDKs</span>.
+            Full-Stack & Mobile Engineer with <span className="font-semibold text-white">4 years of experience</span> crafting high-performance <span className="font-semibold text-blue-400">Flutter cross-platform apps</span>, resilient <span className="font-semibold text-indigo-300">Node.js / Express backends</span>, and modular <span className="font-semibold text-emerald-400">mobile security SDKs</span>.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-9 flex flex-wrap items-center gap-4">
@@ -90,7 +90,7 @@ export default function Hero() {
                 <div><span className="text-purple-400 font-semibold">const</span> <span className="text-blue-300">developer</span> = {"{"}</div>
                 <div className="pl-5 text-zinc-400">name: <span className="text-emerald-300">"Akshay Chandran P"</span>,</div>
                 <div className="pl-5 text-zinc-400">role: <span className="text-emerald-300">"Flutter & Full-Stack Developer"</span>,</div>
-                <div className="pl-5 text-zinc-400">experience: <span className="text-amber-300">"3.5+ Years"</span>,</div>
+                <div className="pl-5 text-zinc-400">experience: <span className="text-amber-300">"4 Years"</span>,</div>
                 <div className="pl-5 text-zinc-400">notice: <span className="text-emerald-300 font-semibold">"Immediate Joiner"</span>,</div>
                 <div className="pl-5 text-zinc-400">mobile: [<span className="text-sky-300">"Flutter"</span>, <span className="text-sky-300">"BLoC"</span>, <span className="text-sky-300">"Riverpod"</span>],</div>
                 <div className="pl-5 text-zinc-400">media: [<span className="text-cyan-300">"AetherStream OTT"</span>, <span className="text-cyan-300">"AWS Media"</span>],</div>

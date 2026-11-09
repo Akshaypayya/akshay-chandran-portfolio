@@ -10,7 +10,7 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
   title: "Akshay Chandran P — Flutter & Full-Stack Developer | Immediate Joiner",
-  description: "Portfolio of Akshay Chandran — Flutter Developer with 3.5+ years of experience building cross-platform mobile and web applications with Flutter/Dart, Node.js, Express, TypeScript, MongoDB, and modular architecture.",
+  description: "Portfolio of Akshay Chandran — Flutter Developer with 4 years of experience building cross-platform mobile and web applications with Flutter/Dart, Node.js, Express, TypeScript, MongoDB, and modular architecture.",
   metadataBase: new URL("https://akshay-chandran-portfolio.vercel.app"),
   openGraph: {
     title: "Akshay Chandran P — Flutter & Full-Stack Developer",

@@ -6,14 +6,14 @@
 [![pub.dev](https://img.shields.io/badge/pub.dev-ironclad%20v0.0.3-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://pub.dev/packages/ironclad)
 [![Notice Period](https://img.shields.io/badge/Availability-Immediate_Joiner-00C853?style=for-the-badge)](https://akshay-chandran-portfolio.vercel.app/#contact)
 
-Modern, high-performance portfolio website engineered with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**, showcasing 3.5+ years of engineering experience across mobile, full-stack, enterprise RASP security, OTT video streaming, and FinTech applications.
+Modern, high-performance portfolio website engineered with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**, showcasing 4 years of engineering experience across mobile, full-stack, enterprise RASP security, OTT video streaming, and FinTech applications.
 
 ---
 
 ## 👨‍💻 About Akshay Chandran P
 
 - **Role**: Flutter Developer & Full-Stack Engineer
-- **Experience**: 3.5+ Years building cross-platform mobile, web, and scalable backend applications
+- **Experience**: 4 Years building cross-platform mobile, web, and scalable backend applications
 - **Status**: **Immediate Joiner** (0 days notice period)
 - **Location**: Kerala, India
 - **Contact**: [+91-7736976618](tel:+917736976618) | [akshay.payya@gmail.com](mailto:akshay.payya@gmail.com)
