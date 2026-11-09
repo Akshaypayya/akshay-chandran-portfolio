@@ -4,15 +4,16 @@ import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import type { Project } from "../data/projects";
 
-type Category = "All" | "FinTech & Banking" | "Security & Systems" | "Full-Stack & Cloud" | "Real-Time & Mobile";
+type Category = "All" | "Security & Systems" | "Media & Streaming" | "FinTech & Banking" | "Full-Stack & Cloud" | "Real-Time & Mobile";
 
 export default function ProjectsGallery({ projects }: { projects: Project[] }) {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
 
   const categories: Category[] = [
     "All",
-    "FinTech & Banking",
     "Security & Systems",
+    "Media & Streaming",
+    "FinTech & Banking",
     "Full-Stack & Cloud",
     "Real-Time & Mobile"
   ];

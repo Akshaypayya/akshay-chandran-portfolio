@@ -2,7 +2,7 @@ export type Project = {
   slug: string;
   name: string;
   type: string;
-  category: "Security & Systems" | "FinTech & Banking" | "Full-Stack & Cloud" | "Real-Time & Mobile";
+  category: "Security & Systems" | "FinTech & Banking" | "Full-Stack & Cloud" | "Real-Time & Mobile" | "Media & Streaming";
   summary: string;
   description: string;
   gradient: string;
@@ -97,7 +97,54 @@ export const projects: Project[] = [
     architecture: "Dashboard UI → Riverpod Diagnostics Provider → Ironclad Core & Subpackages → Threat Evaluator → Trust Score Meter"
   },
 
-  // 3. growk -> GrowK
+  // 3. ott_app -> AetherStream
+  {
+    slug: "aether-stream",
+    name: "AetherStream",
+    type: "Enterprise OTT & Cloud Video Streaming Platform",
+    category: "Media & Streaming",
+    badge: "AWS Media Pipeline",
+    summary: "Production-grade Flutter OTT streaming platform with Adaptive Bitrate (ABR), AWS Media Services cloud pipeline lab, real-time QoE video analytics, and BLoC Clean Architecture.",
+    description: "AetherStream (\"Cinema in the Cloud\") is an enterprise-grade OTT and cloud video streaming platform engineered with Flutter, BLoC, and Clean Architecture to showcase deep video domain expertise. Features an Adaptive Bitrate (ABR) ladder controller (2160p 4K HDR10 HEVC down to 480p), Dolby Atmos and ISO/IEC 14496-30 WebVTT closed captions, Amazon Prime Video-style X-Ray scene intelligence, SCTE-35 Server-Side Ad Insertion (SSAI), persistent dockable mini-player, and an interactive 5-stage AWS Media Services cloud pipeline lab (MediaLive, MediaConvert QVBR, MediaPackage v2 CMAF fMP4, SPEKE v2.0 Widevine L1 & FairPlay Multi-DRM, and CloudFront). Includes a real-time QoE/QoS video analytics engine with ITU-T P.1203 scoring, in-player Stats-for-Nerds HUD, and network condition throttle simulation.",
+    gradient: "from-cyan-500/25 via-blue-600/10 to-transparent",
+    stack: [
+      "Flutter",
+      "Dart",
+      "BLoC / Cubit",
+      "Clean Architecture",
+      "video_player",
+      "AWS Elemental MediaLive",
+      "MediaConvert QVBR",
+      "MediaPackage v2",
+      "MediaTailor SSAI",
+      "Amazon CloudFront",
+      "SPEKE v2.0 Multi-DRM",
+      "ABR Ladder Controller",
+      "QoE Analytics",
+      "CustomPainter",
+      "GitHub Actions CI/CD"
+    ],
+    features: [
+      "Adaptive Bitrate (ABR) Ladder Controller: Real-time dynamic switching between Auto ABR and manual renditions (2160p 4K HDR10 HEVC, 1080p FHD, 720p HD, 480p)",
+      "Multi-Audio & Synchronized WebVTT Subtitles: Dolby Atmos (ec-3), 5.1 Surround, Director's Commentary, and live ISO/IEC 14496-30 subtitle rendering",
+      "Prime Video 'X-Ray' Scene Intelligence: Contextual actor cards, production trivia, soundtrack stems, and AWS MediaConvert encoding metadata synced to timestamp",
+      "Server-Side Ad Insertion (SSAI): AWS Elemental MediaTailor ad pod stitching with SCTE-35 splice tags for seamless, ad-blocker-resilient playback",
+      "Persistent Dockable Mini-Player: Floating bottom PiP-style dock with uninterrupted playback while browsing Catalog, QoE Analytics, or the AWS Media Lab",
+      "Interactive AWS Media Cloud Pipeline Lab: 5-stage architecture inspector covering MediaLive (SRT/RTMPS), MediaConvert (QVBR L9), MediaPackage v2 (CMAF fMP4), SPEKE v2.0 Multi-DRM, and CloudFront HTTP/3",
+      "Real-Time Video QoE & QoS Telemetry Engine: In-player 'Stats for Nerds' HUD, composite ITU-T P.1203 score, TTFF (ms), rebuffer ratio (%), and live Bitrate vs. Bandwidth dual-series chart",
+      "Network Condition Throttle Simulator: Throttle between 5G/Fiber (25 Mbps), 4G LTE (8.5 Mbps), Congested Cellular (3.8 Mbps), and 3G Tunnel (1.6 Mbps) to observe automatic ABR adaptation and telemetry beacons",
+      "Feature-First Clean Architecture: Strict Domain, Data, and Presentation separation with BLoC state management and 100% automated CI/CD coverage"
+    ],
+    impact: "Demonstrates specialized video streaming domain mastery, low-latency CMAF packaging, broadcast-grade AWS Elemental cloud workflows, and real-time video telemetry.",
+    stats: [
+      { label: "Video Quality", value: "4K HDR10 ABR" },
+      { label: "Cloud Pipeline", value: "AWS Media Services" },
+      { label: "State Pattern", value: "BLoC Clean Arch" }
+    ],
+    architecture: "Client (Flutter/BLoC) → CMAF fMP4 / HLS / DASH → Amazon CloudFront (Edge POP) → AWS MediaPackage v2 & SPEKE v2.0 DRM → MediaConvert QVBR → MediaLive"
+  },
+
+  // 4. growk -> GrowK
   {
     slug: "growk",
     name: "GrowK",
@@ -140,7 +187,7 @@ export const projects: Project[] = [
     architecture: "Client (Flutter/Riverpod) → Keycloak OAuth2 → Nafath Identity Gateway → Banking Core → Digital Ledger"
   },
 
-  // 4. payzo_books -> Payzo Books
+  // 5. payzo_books -> Payzo Books
   {
     slug: "payzo-books",
     name: "Payzo Books",
@@ -182,7 +229,7 @@ export const projects: Project[] = [
     architecture: "Presentation (Riverpod) → Domain Entities → Repository Layer → BaseApiService (HTTP/Dio) → Backend Service"
   },
 
-  // 5. eccomerce_app -> Multi-Vendor E-Commerce
+  // 6. eccomerce_app -> Multi-Vendor E-Commerce
   {
     slug: "multi-vendor-ecommerce",
     name: "Multi-Vendor E-Commerce",
@@ -223,7 +270,7 @@ export const projects: Project[] = [
     architecture: "3 Clients (Buyer, Vendor, Admin) → Express REST API → MongoDB Cluster → Stripe / Cloudinary / AWS Services"
   },
 
-  // 6. ride_booking -> AutoRide
+  // 7. ride_booking -> AutoRide
   {
     slug: "autoride",
     name: "AutoRide",
@@ -264,7 +311,7 @@ export const projects: Project[] = [
     architecture: "Passenger / Driver Apps → Geolocator GPS → Firebase Realtime DB → Express Payment Backend → Razorpay Gateway"
   },
 
-  // 7. sky_hopper -> SkyHopper
+  // 8. sky_hopper -> SkyHopper
   {
     slug: "skyhopper",
     name: "SkyHopper",
@@ -302,7 +349,7 @@ export const projects: Project[] = [
     architecture: "Flutter Canvas → Flame GameLoop → Sprite Component Tree → Collision Rects → Flame Audio → SharedPreferences"
   },
 
-  // 8. ez-bank -> EZ Bank
+  // 9. ez-bank -> EZ Bank
   {
     slug: "ez-bank",
     name: "EZ Bank",
@@ -343,7 +390,7 @@ export const projects: Project[] = [
     architecture: "Feature-First Core → ThemeController → Riverpod Notifiers → GoRouter Shell → Secure Storage Engine"
   },
 
-  // 9. sudan-upi -> SIMT UPI
+  // 10. sudan-upi -> SIMT UPI
   {
     slug: "sudan-upi",
     name: "SIMT UPI",
@@ -384,50 +431,5 @@ export const projects: Project[] = [
       { label: "Interactions", value: "Audio + Haptic Chimes" }
     ],
     architecture: "Device SIM & Biometrics → Locale/Theme Controllers → Account Discovery → EBS Network Switch → QR/P2P Engine"
-  },
-
-  // 10. sync talk -> SyncTalk (Under Maintenance, moved to last)
-  {
-    slug: "synctalk",
-    name: "SyncTalk",
-    type: "Full-Stack Real-Time Communication Platform (Under Maintenance)",
-    category: "Real-Time & Mobile",
-    badge: "Under Maintenance",
-    isMaintenance: true,
-    summary: "Real-time messaging and WebRTC video calling platform with scalable Socket.IO, Redis pub/sub, and Hive offline caching (currently under active maintenance and architecture upgrade).",
-    description: "A real-time communication platform featuring a Flutter mobile client, Flutter Web admin portal, and a Node.js/TypeScript backend. Designed for low latency messaging under 100ms, peer-to-peer WebRTC video/voice calls, Redis pub/sub cluster message distribution, offline-first message caching with Hive, and containerized Docker deployment. Note: This project is currently undergoing maintenance and modernization.",
-    gradient: "from-violet-500/20 via-zinc-800/10 to-transparent",
-    stack: [
-      "Flutter",
-      "Riverpod",
-      "WebRTC",
-      "Socket.IO",
-      "Node.js",
-      "TypeScript",
-      "Express",
-      "MongoDB",
-      "Redis Pub/Sub",
-      "Docker Compose",
-      "Nginx",
-      "Hive",
-      "GoRouter"
-    ],
-    features: [
-      "Sub-100ms real-time messaging with delivery, read receipts, and typing indicators",
-      "WebRTC peer-to-peer audio and video calling with STUN/TURN ICE negotiation",
-      "Horizontal clustering with Socket.IO Redis Adapter for multi-instance message broadcasting",
-      "Offline-first architecture with local Hive database and automated background sync queue",
-      "Flutter Web administration dashboard for user moderation, chat metrics, and system telemetry",
-      "Rich media transmission (images, audio notes, video clips) via Cloudinary pipeline",
-      "Docker Compose orchestration with Nginx reverse proxy, SSL termination, and rate limiting",
-      "Project currently placed under scheduled maintenance and refactoring"
-    ],
-    impact: "Engineered sub-100ms message delivery latency and high-concurrency real-time WebSocket infrastructure.",
-    stats: [
-      { label: "Status", value: "Under Maintenance" },
-      { label: "Delivery Latency", value: "<100ms" },
-      { label: "Calling", value: "WebRTC Audio/Video" }
-    ],
-    architecture: "Flutter Mobile / Web → WebSocket / WebRTC → Nginx Load Balancer → Node.js Cluster → Redis Pub/Sub → MongoDB"
   }
 ];

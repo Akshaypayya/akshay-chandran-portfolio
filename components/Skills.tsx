@@ -7,9 +7,8 @@ import {
   Cpu,
   Terminal,
   ShieldCheck,
-  Sparkles,
-  Layers,
-  CheckCircle2
+  Video,
+  Layers
 } from "lucide-react";
 
 const groups = [
@@ -40,15 +39,34 @@ const groups = [
     badge: "95%+ Test Coverage Pattern",
     items: [
       "Riverpod",
+      "BLoC / Cubit",
       "Provider",
       "GetX",
-      "BLoC (basic)",
       "Clean Architecture",
       "MVVM",
       "Repository Pattern",
       "MVC",
       "SOLID Principles",
       "Feature-First Modular Architecture"
+    ]
+  },
+  {
+    title: "Video Streaming & Cloud Media",
+    icon: Video,
+    color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+    badge: "OTT & Broadcast Workflows",
+    items: [
+      "Adaptive Bitrate (ABR) Ladders",
+      "video_player",
+      "AWS Elemental MediaConvert (QVBR)",
+      "AWS MediaPackage v2 (CMAF fMP4)",
+      "AWS Elemental MediaLive (SRT/RTMPS)",
+      "AWS Elemental MediaTailor (SSAI / SCTE-35)",
+      "Amazon CloudFront CDN (HTTP/3)",
+      "SPEKE v2.0 Multi-DRM (Widevine L1 / FairPlay)",
+      "Real-Time QoE Analytics (ITU-T P.1203)",
+      "Synchronized WebVTT Closed Captions",
+      "Dolby Atmos (ec-3) Audio"
     ]
   },
   {
@@ -72,7 +90,7 @@ const groups = [
     title: "Backend, APIs & Real-Time",
     icon: Server,
     color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
-    badge: "Sub-100ms Latency Systems",
+    badge: "REST & Scalable Backends",
     items: [
       "Node.js",
       "Express.js",
@@ -129,7 +147,6 @@ const groups = [
       "Saudi Nafath KYC",
       "Biometrics (local_auth)",
       "Google Maps SDK & Polylines",
-      "WebRTC Audio/Video",
       "Cloudinary Pipeline",
       "AWS SES",
       "Firebase FCM"
@@ -144,7 +161,7 @@ const groups = [
       "Docker & Docker Compose",
       "Nginx",
       "GitHub Actions (CI/CD)",
-      "Unit, Widget & Integration Tests",
+      "Unit, Widget & BLoC Tests",
       "Git & GitHub",
       "Android Studio",
       "VS Code",
@@ -158,32 +175,34 @@ const groups = [
 
 export default function Skills() {
   return (
-    <div className="grid gap-5 md:grid-cols-2">
+    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {groups.map(group => {
         const Icon = group.icon;
         return (
           <Reveal key={group.title}>
-            <div className="glass-card group rounded-[2rem] p-7 transition duration-300 hover:border-white/20 hover:shadow-xl hover:shadow-blue-500/5">
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className={`flex h-11 w-11 items-center justify-center rounded-xl border ${group.color} transition duration-300 group-hover:scale-105`}>
-                    <Icon size={22} />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-lg font-bold text-white sm:text-xl">{group.title}</h3>
-                    <span className="font-mono text-[11px] text-zinc-500">{group.badge}</span>
+            <div className="glass-card group flex h-full flex-col justify-between rounded-[2rem] p-7 transition duration-300 hover:border-white/20 hover:shadow-xl hover:shadow-blue-500/5">
+              <div>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className={`flex h-11 w-11 items-center justify-center rounded-xl border ${group.color} transition duration-300 group-hover:scale-105`}>
+                      <Icon size={22} />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-bold text-white sm:text-xl">{group.title}</h3>
+                      <span className="font-mono text-[11px] text-zinc-500">{group.badge}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {group.items.map(x => (
-                  <span
-                    key={x}
-                    className="rounded-xl border border-white/8 bg-white/[0.03] px-3.5 py-2 text-xs font-medium text-zinc-300 transition duration-200 hover:border-white/20 hover:bg-white/[0.08] hover:text-white"
-                  >
-                    {x}
-                  </span>
-                ))}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {group.items.map(x => (
+                    <span
+                      key={x}
+                      className="rounded-xl border border-white/8 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-zinc-300 transition duration-200 hover:border-white/20 hover:bg-white/[0.08] hover:text-white"
+                    >
+                      {x}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </Reveal>

@@ -22,7 +22,7 @@ export default function Home() {
                 I’m a <span className="font-semibold text-white">Flutter Developer & Full-Stack Engineer</span> with <span className="font-semibold text-blue-400">3.5+ years of experience</span> building cross-platform mobile, web, and backend applications. I specialize in modular architecture, Riverpod/Provider state management, REST APIs, WebSockets, Firebase, and production-ready delivery.
               </p>
               <p className="mt-5 leading-7 text-zinc-400">
-                My work spans FinTech & digital gold savings (Saudi Nafath KYC), business ERP & accounting (Payzo Books), military-grade mobile security tooling (<span className="text-zinc-200">Ironclad RASP SDK published on pub.dev</span>), multi-vendor marketplaces, real-time ride-booking with live GPS routing, and sub-100ms WebRTC communication platforms.
+                My work spans military-grade mobile security tooling (<span className="text-zinc-200">Ironclad RASP SDK published on pub.dev</span> with 38 modular packages), enterprise OTT & cloud video streaming (<span className="text-zinc-200">AetherStream</span> with AWS Media Services, ABR ladders & QoE analytics), FinTech & digital gold savings (Saudi Nafath KYC in GrowK), business ERP & accounting (Payzo Books), multi-vendor marketplaces, and real-time ride-booking with live GPS routing.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3 pt-6 border-t border-white/10">
                 <span className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-emerald-300">

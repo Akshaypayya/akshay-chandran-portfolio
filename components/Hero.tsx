@@ -92,10 +92,10 @@ export default function Hero() {
                 <div className="pl-5 text-zinc-400">role: <span className="text-emerald-300">"Flutter & Full-Stack Developer"</span>,</div>
                 <div className="pl-5 text-zinc-400">experience: <span className="text-amber-300">"3.5+ Years"</span>,</div>
                 <div className="pl-5 text-zinc-400">notice: <span className="text-emerald-300 font-semibold">"Immediate Joiner"</span>,</div>
-                <div className="pl-5 text-zinc-400">mobile: [<span className="text-sky-300">"Flutter"</span>, <span className="text-sky-300">"Riverpod"</span>, <span className="text-sky-300">"Dart"</span>],</div>
-                <div className="pl-5 text-zinc-400">backend: [<span className="text-emerald-300">"Node.js"</span>, <span className="text-purple-300">"Express"</span>, <span className="text-blue-300">"TypeScript"</span>],</div>
+                <div className="pl-5 text-zinc-400">mobile: [<span className="text-sky-300">"Flutter"</span>, <span className="text-sky-300">"BLoC"</span>, <span className="text-sky-300">"Riverpod"</span>],</div>
+                <div className="pl-5 text-zinc-400">media: [<span className="text-cyan-300">"AetherStream OTT"</span>, <span className="text-cyan-300">"AWS Media"</span>],</div>
                 <div className="pl-5 text-zinc-400">security: [<span className="text-rose-300">"Ironclad RASP"</span>, <span className="text-rose-300">"pub.dev v0.0.3"</span>],</div>
-                <div className="pl-5 text-zinc-400">database: [<span className="text-emerald-300">"MongoDB"</span>, <span className="text-rose-300">"Redis"</span>, <span className="text-amber-300">"Firebase"</span>]</div>
+                <div className="pl-5 text-zinc-400">backend: [<span className="text-emerald-300">"Node.js"</span>, <span className="text-purple-300">"Express"</span>, <span className="text-blue-300">"TypeScript"</span>]</div>
                 <div>{"}"};</div>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function Hero() {
                 { name: "Flutter", color: "bg-sky-500/20 text-sky-300 border-sky-500/30" },
                 { name: "Node.js", color: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30" },
                 { name: "RASP SDK", color: "bg-rose-500/20 text-rose-300 border-rose-500/30" },
-                { name: "MongoDB", color: "bg-green-500/20 text-green-300 border-green-500/30" }
+                { name: "OTT / ABR", color: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30" }
               ].map(tech => (
                 <div key={tech.name} className={`rounded-xl border px-2 py-2 text-center font-mono text-[11px] font-semibold backdrop-blur-md ${tech.color}`}>
                   {tech.name}
